@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap');
+:root{
+
+    --Cyan: hsl(179, 62%, 43%);
+    --Bright-Yellow: hsl(71, 73%, 54%);
+
+
+
+    --Light-Gray: hsl(204, 43%, 93%);
+    --Grayish-Blue: hsl(218, 22%, 67%);
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Karla', sans-serif;
+    background-color:var(--Light-Gray);
+    font-size: 16px;
+}
+.wrapper{
+    margin: 2em;
+    border-radius: 5px;
+    overflow: hidden;
+}
+.box{
+    padding: 2em;
+}
+.top-section{
+    background-color: white;
+}
+.top-section h2{
+    color: var(--Cyan);
+    font-size: 1.3em;
+    padding-bottom: 1.5em;
+}
+.top-section h3{
+    color: var(--Bright-Yellow);
+    padding-bottom: 1.5em;
+}
+.top-section p{
+    color: var(--Grayish-Blue);
+    line-height: 2em;
+    padding-bottom: 1em;
+}
+.left-box{
+    background-color: var(--Cyan);
+    color: white;
+}
+.left-box h3{
+    padding-bottom: 1.5em;
+}
+.price{
+    font-size: 1.5em;
+}
+.per-month{
+    color: var(--Light-Gray);
+    font-size: .8em;
+    font-weight: 400;
+    padding-left: 1em;
+}
+.left-box h2{
+    padding-bottom: .5em;
+}
+.left-box p{
+    color: white;
+}
+.left-box a{
+    display: block;
+    background-color: var(--Bright-Yellow);
+    padding: 1em 0;
+    text-align: center;
+    font-weight: bold;
+    color: white;
+     margin-top: 2em;
+     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.089), 0 6px 6px rgba(0, 0, 0, 0.041);
+     border-radius: 5px;
+}
+.right-section{
+    background-color: hsla(179, 62%, 43%, 0.747);
+    color: white;
+}
+.right-section p{
+    line-height: 1.5em;
+    font-weight: 400;
+    color: var(--Light-Gray);
+    padding: 1.5em 8em 1em 0;
+}
+@media (min-width:768px) {
+    body{
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+    }
+    .container{
+        width: 800px;
+        margin: 0 auto;
+    }
+    .wrapper{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        
+    }
+    .top-section{
+        grid-column: span 2;
+    }
+    .right-section p{
+        padding: 1.5em;
+    }
+}
